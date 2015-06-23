@@ -18,6 +18,15 @@ Output: index1=1, index2=2
 
 using namespace std;
 
+/*
+keep a hashmap, number value (target - number value) as key and index as value
+travese array if we cannot find key in hasmap(for now no number can match sum with it), 
+insert it.
+otherwise, put its index and item's value in hashmap in output array
+*/ 
+
+
+
 class Solution
 {
 public:
@@ -26,24 +35,22 @@ public:
 		//vector<int>::iterator itr;
 		unordered_map<int,int> myMap;  //<key, value>: value,index
 		int findValue;
-		map<int,int>::iterator mitr;
+		//map<int,int>::iterator mitr;
 		int vectorLength=numbers.size();
 		for(int i=0;i<vectorLength;i++){
 			findValue=target-(numbers[i]);
-			mitr=myMap.find(findValue);
-			if(mitr==myMap.end()){  //what is stored in map.end()??
+			if(myMap.find(findValue)==myMap.end()){  //what is stored in map.end()??
 				myMap[numbers[i]]=i;
 			}else{
-				output.push_back(mitr->second+1);
+				output.push_back(myMap[findValue]+1);
 				output.push_back(i+1);								
 			}
 		}
 		//sort(output.begin(),output.end());
-
-		//cout<<output[0]<<" "<<output[1]<<endl;
 		return output;
 	}
 };
+
 
 
 int main(){
