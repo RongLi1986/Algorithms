@@ -19,16 +19,24 @@ using namespace std;
     ListNode(int x) : val(x), next(NULL) {}
  };
  
+ /*
+    like do it in math, we calculate sum and carry by
+    sum=(a+b+carry)/10;
+    carry=(a+b+carry)%10
+    we need to consider that a or b == null case;
+ */
+
+
 class Solution {
 public:
     ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
     	ListNode* ptr1=l1;
         ListNode* ptr2=l2;
-        ListNode* OutputHeader=new ListNode(0);
+        ListNode* OutputHeader=new ListNode(0);  //output header
         ListNode* ptr3=OutputHeader;
         int carry=0;
         int sum=0;
-        while(ptr1!=NULL && ptr2!=NULL){
+        while(ptr1!=NULL && ptr2!=NULL){   //a and b exist
         	sum=(ptr1->val+ptr2->val+carry)%10;
         	ptr3->val=sum;
         	ListNode* temp=new ListNode(0);
@@ -61,9 +69,11 @@ public:
         	ptr2=ptr2->next;
         }
 
+
+        //since we have a node (0) in list, if carry==0 we need to get rid of it
         if(carry==1)
         	ptr3->val=1;
-        else{
+        else{  
         	ListNode* ptr4=OutputHeader;  //kill last node(0)
         	while(ptr4->next!=ptr3){
         		ptr4++;
