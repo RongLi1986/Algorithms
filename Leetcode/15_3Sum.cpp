@@ -12,10 +12,17 @@ The solution set must not contain duplicate triplets.
     (-1, -1, 2)
 */
 
+/*
+1. using hashmap like two sum. and need handle repeat numbers(using hashmap's value as flag, -1 means used)
+2. use two index left and right, and move them by compare nums[left]+nums[right] with target
+nums[left]+nums[right] < target, move left
+nums[left]+nums[right] > target, move right
+also handle repeat case
+*/
+
 
 #include <iostream>
 #include <vector>
-#include <set>
 #include <unordered_map>
 #include <algorithm>
 #include <chrono>
@@ -27,7 +34,8 @@ private:
     vector<vector<int> > out;
     set<vector<int> > tmp;
 public:
-    vector<vector<int> > threeSum(vector<int> &num) {
+	//first way
+    vector<vector<int> > threeSum1(vector<int> &num) {
         sort(num.begin(),num.end());
         int size=num.size();
         int chooseNum;
@@ -65,8 +73,8 @@ public:
         }
     }
 
-
-    vector<vector<int> > threeSum_new(vector<int> &num) {
+    //second way; faster and no hashmap used
+    vector<vector<int> > threeSum2(vector<int> &num) {
         sort(num.begin(),num.end());
         int size=num.size();
         int chooseNum;
@@ -81,10 +89,8 @@ public:
 
     void twoSumCheck_new(vector<int> &numbers, int target, int block, int vectorLength){
         vector<int> output;
-        //unordered_map<int,int> myMap;  //<key, value>: value,index
+
         int findValue;
-        //unordered_map<int,int>::iterator mitr;
-        //int vectorLength=numbers.size();
         int left=block+1;
         int right=vectorLength-1;
 
