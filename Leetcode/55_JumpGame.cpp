@@ -19,12 +19,37 @@ could reach to this target. loop to do it until target
 equal to 0. but if target don't change, return false;
 */
 
+/*
+or you could use DP
+*/
 
 #include <iostream>
 #include <vector>
 using namespace std;
 
-class Solution {
+//DP way
+//equation
+//jump[i] = max(jump[i-1], A[i-1]) -1, i!=0  
+//        = 0 , i==0 
+class Solution{
+public:
+    bool canJump(vector<int>& nums) {
+        if(nums.empty()) return false;
+        int n=nums.size();
+        int* jump = new int[n];  
+        jump[0] = 0;  
+        for(int i=1; i < n; i++)  
+        {  
+            jump[i] = max(jump[i-1], nums[i-1]) -1;  
+            if(jump[i] <0)  return false;;  
+        }  
+        
+        return jump[n-1] >=0;  
+    }
+};  
+
+
+class Solution_old {
 public:
     bool canJump(vector<int>& nums) {
         if(nums.empty()) return false;
