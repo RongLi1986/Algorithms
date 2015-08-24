@@ -13,6 +13,13 @@ The minimum number of jumps to reach the last index is 2.
 (Jump 1 step from index 0 to 1, then 3 steps to the last index.)
 */
 
+/*
+我们维护两个变量，当前能达到的最远点p以及下一次能达到的最远点q，在p的范围内迭代计算q，然后更
+新步数，并将最大的q设置为p。重复这个过程知道p达到终点。
+
+temp 当前最远点
+maxx 下一次最远点 
+*/
 
 #include <iostream>
 #include <vector>
