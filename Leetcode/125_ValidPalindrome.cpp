@@ -24,6 +24,33 @@ using namespace std;
 class Solution {
 public:
     bool isPalindrome(string s) {
+        int start=0;
+        int end=s.size()-1;
+        
+        while(start<end){
+           //cout<<s[start]<<" "<<end<<endl;
+            if(!isalnum(s[start])){
+                start++;
+            }else if(!isalnum(s[end])){  //we have isalnum function
+                end--;
+            }else{
+                s[start] = toupper(s[start]);
+                s[end] = toupper(s[end]);
+                if(s[start]!=s[end])
+                    return false;
+                start++;
+                end--;
+            }
+        }
+        
+        return true;
+        
+    }
+};
+
+class Solution {
+public:
+    bool isPalindrome(string s) {
         string t=stringFilter(s);
         
         int start=0;
@@ -31,6 +58,8 @@ public:
         
         while(start<end){
            //cout<<s[start]<<" "<<end<<endl;
+
+
             if(t[start]!=t[end]){
                 return false;
             }
