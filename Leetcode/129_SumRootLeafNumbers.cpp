@@ -17,6 +17,13 @@ The root-to-leaf path 1->3 represents the number 13.
 Return the sum = 12 + 13 = 25.
 */
 
+/*
+use recursive and DFS, caculate each leaf value,
+when node is end, update sum.
+*/
+
+
+
 #include <iostream>
 using namespace std;
 /**
@@ -31,13 +38,14 @@ using namespace std;
  
 class Solution {
 private:
-    vector<int> sum;
+    int sum;
 public:
     int sumNumbers(TreeNode* root) {
         if(root==NULL) return 0;
+        sum=0;
         dfs(root,0);
         
-        return accumulate(sum.begin(),sum.end(),0);
+        return sum;//accumulate(sum.begin(),sum.end(),0);
     }
     
     void dfs(TreeNode* root,int tmp){
@@ -52,7 +60,7 @@ public:
         //if it is last node, push result into vector
         //it cannot do at leaf, because it has left and right(result will double)
         if(root->left==NULL&&root->right==NULL)
-            sum.push_back(tmp);
+            sum+=tmp;
     
         return;
     }
