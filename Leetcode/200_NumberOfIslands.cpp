@@ -19,14 +19,15 @@ Example 2:
 Answer: 3
 */
 
-
 /*
-solution is BFS + mark Visited node:
+solution is DFS + mark Visited node:
+
+it looks like BFS, but it use recursive, so actually is DFS
+TODO: what about use iterative way to do it? (queue)
 
 for any 1 in map, change it to 0 (means it has already marked)
 and islandCount++ , then run BFS from it.
 */
-
 
 #include <iostream>
 #include <string>
@@ -39,6 +40,7 @@ and islandCount++ , then run BFS from it.
 using namespace std;
 
 //optimize no visit map need
+//change BFS name to DFS
 class Solution {
 public:
     int numIslands(vector<vector<char>>& grid) {
@@ -47,33 +49,33 @@ public:
             for(int j=0;j<grid[0].size();j++){
                 if(grid[i][j]=='1'){
                     islandCount++;
-                    BFS(grid,i,j);
+                    DFS(grid,i,j);
                 }
             }
             
         return islandCount;
     }
     
-    void BFS(vector<vector<char>>& grid, int row,int col){
+    void DFS(vector<vector<char>>& grid, int row,int col){
         if(grid[row][col]=='0') return;
         
         grid[row][col]='0';
         
         //go up
         if(row>0)
-            BFS(grid,row-1,col);
+            DFS(grid,row-1,col);
         
         //go down
         if(row<grid.size()-1)
-            BFS(grid,row+1,col);
+            DFS(grid,row+1,col);
         
         //go left
         if(col>0)
-            BFS(grid,row,col-1);
+            DFS(grid,row,col-1);
         
         //go right
         if(col<grid[0].size()-1)
-            BFS(grid,row,col+1);
+            DFS(grid,row,col+1);
         
         return;
     }
