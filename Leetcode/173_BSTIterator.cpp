@@ -34,36 +34,29 @@ struct TreeNode {
 };
 
 
-//basic way
+//recursive DFS and no need sort queue
 class BSTIterator {
 private:
-    stack<TreeNode*> stk;
     vector<int> queue;
     int NextPtr;
+    void pushInSatck(TreeNode *root){
+        if(root!=NULL){
+            pushInSatck(root->left);
+            queue.push_back(root->val);
+            pushInSatck(root->right);
+        }
+    }
+
 public:
     BSTIterator(TreeNode *root) {
-        //DFS and put each node in vector
-        if(!root==NULL){
-            stk.push(root);
-            while(!stk.empty()){
-                TreeNode* tmp=stk.top();
-                stk.pop();
-                queue.push_back(tmp->val);
-                if(tmp->left!=NULL)
-                    stk.push(tmp->left);
-            
-                if(tmp->right!=NULL)
-                    stk.push(tmp->right);
-            
-            }
-        }    
+        pushInSatck(root);
         
         if(!queue.empty()){
-            sort(queue.begin(),queue.end());
             NextPtr=0;
         }else
             NextPtr=INT_MAX;
-        
+        //sort(stack.begin(), stack.end());
+        //reverse(stack.begin(), stack.end());
     }
 
     /** @return whether we have a next smallest number */
@@ -78,7 +71,6 @@ public:
         return queue[tmp];
     }
 };
-
 
 //it use only stack
 class BSTIterator {
