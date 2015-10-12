@@ -41,13 +41,15 @@ public:
                     ptrCur=ptrPre;
                     head->next=NULL;
                     head=ptrCur;
+                    continue;     //no need update ptrCur
                 }else{  //normal case
                     ptrPre->next=ptrCur->next;
                     ptrCur->next=NULL;
                     ptrCur=ptrPre;
                 }
             }
-            
+        
+
             //update ptrPre and ptrCur
             ptrPre=ptrCur;
             ptrCur=ptrCur->next;
