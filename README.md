@@ -1,3 +1,3 @@
 # Algorithms
 There are some algorithm's codes and coding interview questions.
-It used for coding pratice.
+now I foucus on doing pratice on Leetcode.
