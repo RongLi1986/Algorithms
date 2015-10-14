@@ -1,2 +1,3 @@
 # Algorithms
-learn some Algorithm's questions
+There are some algorithm's codes and coding interview questions.
+It used for coding pratice.
