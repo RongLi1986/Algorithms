@@ -22,11 +22,17 @@ Output:
 
 [[1,2,6], [1,3,5], [2,3,4]]
 */
+
+
+
+/*
+solution: recursive & backtrack 
+
+*/
 #include <vector>
 #include <iostream>
 
 using namespace std;
-
 
 class Solution {
 private:
@@ -39,33 +45,32 @@ public:
             candidates.push_back(i);
         }
         int size=candidates.size();
-        recusiveCombinSum(candidates,size,v,n,0,0,k);
+        recusiveCombinSum(candidates,v,n,0,0,k);
 
         return out;
     }
 
-    void recusiveCombinSum(vector<int> &candidates, int size, vector<int> v,int target, int index, int count,int k){
-        if(count>k){
+    void recusiveCombinSum(vector<int> &candidates, vector<int> v,int target, int index, int count, int k){
+        if(count==k){
+            if(target==0)
+                out.push_back(v);
             return;
         }
-        if(target==0&&count==k){
-            out.push_back(v);
-            return;
-        }
-        for(int i=index;i<size;i++){
-            if(target>=candidates[i]){
-                int nextTarget=target-candidates[i];
+        
+        for(int i=index;i<candidates.size();i++){
+            if(candidates[i]<=target){
                 v.push_back(candidates[i]);
-                recusiveCombinSum(candidates, size, v, nextTarget, i+1, count+1,k);
+                recusiveCombinSum(candidates,v,target-candidates[i],i+1,count+1,k);
                 v.pop_back();
-            }else
+            }else{
+                //the candidates is sorted, so next number also larger than target
                 return;
-            
+            }
         }
+        
         return;
     }
 };
-
 int main(){
 	Solution s;
     vector<vector<int> > out=s.combinationSum3(3,7);
