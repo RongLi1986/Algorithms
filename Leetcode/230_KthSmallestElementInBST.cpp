@@ -27,7 +27,7 @@ struct TreeNode {
 
 /*
 inorder traverse and put all value 
-in vector
+in vector (it could stop when vector has k item)
 
 return vector[k-1]
 
@@ -45,12 +45,13 @@ public:
         return v[k-1];        
     }
     
-    void inorder(TreeNode* root){
+    void inorder(TreeNode* root, int k){
         if(root==NULL) return;
         
-        inorder(root->left);
+        inorder(root->left, k);
         v.push_back(root->val);
-        inorder(root->right);
+        if(v.size()==k) return;  //if we got kth item, return
+        inorder(root->right, k);
         
         return;
     }
