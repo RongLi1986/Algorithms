@@ -7,13 +7,35 @@ You may assume that the array is non-empty and the majority element always exist
 */
 
 /*
-O(n): hasmap
-O(nlg(n)): sort
+1.O(n): hasmap, space O(N)
+2.O(nlg(n)): sort
+3.there only one number could appear more than 1/2 in array....
 */
 
 #include <iostream>
 #include <vector>
 using namespace std;
+
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        int n;
+        int c=0;
+        
+        for(int num: nums){
+            if(n==num){
+                c++;
+            }else if(c==0){
+                n=num;
+                c++;
+            }else
+                c--;
+        }
+        
+        return n;
+    }
+};
+
 
 class Solution_hasMap {
 public:
@@ -47,6 +69,7 @@ public:
         return num[0];
     }
 };
+
 
 int main(){
 
