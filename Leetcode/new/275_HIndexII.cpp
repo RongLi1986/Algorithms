@@ -13,7 +13,12 @@ H-Index II
 Total Accepted: 13919 Total Submissions: 43910 Difficulty: Medium
 Follow up for H-Index: What if the citations array is sorted in ascending order? Could you optimize your algorithm?
 
+it needs O(logn)
 */
+
+//use binary search
+
+
 
 #include <iostream>
 #include <vector>
@@ -26,6 +31,8 @@ public:
         if(citations.empty()) return 0;
         int count=0;
         //sort(citations.begin(),citations.end()); //it has already ascending order
+
+        //O(n)
         for(int i=citations.size()-1;i>=0;i--){
             int next=citations.size()-i;
             if(next<=citations[i])
@@ -33,6 +40,28 @@ public:
         }
         
         return count;
+    }
+
+    //o(lg(n))
+    int hIndex(vector<int>& citations) {
+        if(citations.empty()) return 0;
+        
+        int left=0;
+        int right=citations.size()-1;
+        int mid;
+        int next;
+        
+        while(left<=right){
+            mid=(left+right)/2;
+            next=citations.size()-mid;
+            if(next<=citations[mid])
+                right=mid-1;
+            else
+                left=mid+1;   
+        }
+        
+        //mid is last one index corner case [0] or [1]
+        return next-(int)(next>citations[mid]);
     }
 };
 

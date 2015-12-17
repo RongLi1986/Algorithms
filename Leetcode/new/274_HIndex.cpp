@@ -19,15 +19,16 @@ class Solution {
 public:
     int hIndex(vector<int>& citations) {
         if(citations.empty()) return 0;
-        int count=0;
+        //int count=0;
         sort(citations.begin(),citations.end());
-        for(int i=citations.size()-1;i>=0;i--){
+        for(int i=0;i<citations.size();i++){
             int next=citations.size()-i;
             if(next<=citations[i])
-                count++;
+                return next;
+                //count++;
         }
         
-        return count;
+        return 0;
     }
 };
 
