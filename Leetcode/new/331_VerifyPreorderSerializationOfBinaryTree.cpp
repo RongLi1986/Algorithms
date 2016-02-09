@@ -32,6 +32,18 @@ Return false
 
 */
 
+/*
+DFS verify, I uses two stk, one stores numbers,
+another stores left ot right branch.
+
+for example,
+strStk: 9, 3
+directStk: L, 
+
+it show 3 is Left node of 9.
+*/
+
+
 #include <iostream>
 #include <sstream>
 #include <vector>
@@ -48,33 +60,37 @@ public:
     bool isValidSerialization(string preorder) {
         if(preorder.empty()) return false;
         int i=0;
-        //int flag=0;  //0 is L, 1 is R
         vector<string> numbers;
         string word;
         preorder=preorder+","; //for getting last numbers
-        //cout<<preorder1<<endl;
         stringstream stream(preorder);
         while( getline(stream, word, ',') ){
-            //cout << word << "\n";
             numbers.push_back(word);
         }
         
         while(i<numbers.size()){
             //cout<<numbers[i];
             string item=numbers[i];
-            if(item!="#"){
+            if(item!="#"){       
+                /*
+                 if number is not "#", store it in strStk,
+                 and push L in directStk (it means go left)
+                 */
                 strStk.push(item);
                 directStk.push("L");
-                /*
-                if(flag==0){
-                    directStk.push("L");
-                    flag=0;
-                }else if(flag==1){
-                    directStk.push("R");
-                    flag=0;
-                }*/
             }else if(item=="#"){
-                if(directStk.empty()) {  //first "#"
+                /*
+                if number is "#", it need to check:
+                1. directStk top is L (it means L leap is empty), pop directStk 
+                and push R in it (we go right leap)
+                2. directStk top is R (it means R leap is empty) , pop directStk and strStk looply until directStk's
+                Top is L (keep popping all right leap nodes). then change directStk by pop L and push R.
+
+                if in step 2 stacks are empty, it means DFS finished. in this condition, if all string are scanned.
+                return true. otherwise return false.
+                 */
+                
+                if(directStk.empty()) {  //cornner case: root is "#"
                     if(i==numbers.size()-1)
                         return true;
                     else
@@ -83,7 +99,6 @@ public:
                 if(directStk.top()=="L"){
                     directStk.pop();
                     directStk.push("R");
-                    //flag=0;  
                 }else if(directStk.top()=="R"){
                     while(directStk.top()!="L"){
                         directStk.pop();
@@ -97,13 +112,13 @@ public:
                     }
                     directStk.pop();
                     directStk.push("R");
-                    //flag=0;
                 }
             }
 
-            i=i+1;  //skip ','
+            i=i+1;
         }
 
+        //if input string scan finished but stacks has not empty, return false;
         if(!strStk.empty()||!directStk.empty())
             return false;
         else
