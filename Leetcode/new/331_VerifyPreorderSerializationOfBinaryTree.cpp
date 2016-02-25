@@ -33,6 +33,7 @@ Return false
 */
 
 /*
+solution 1:
 DFS verify, I uses two stk, one stores numbers,
 another stores left ot right branch.
 
@@ -43,6 +44,13 @@ directStk: L,
 it show 3 is Left node of 9.
 */
 
+/*
+solution 2:
+any end node should with two #s.
+so we could scan string and replace " nums,#,# " with "#"
+if string could change to "#", it could return true;
+*/
+
 
 #include <iostream>
 #include <sstream>
@@ -51,6 +59,52 @@ it show 3 is Left node of 9.
 #include <stack>
 
 using namespace std;
+
+//solution II
+class Solution1 {
+private:
+    stack<string> strStk;
+public:
+    bool isValidSerialization(string preorder) {
+        if(preorder.empty()) return false;
+        int i=0;
+        vector<string> numbers;
+        string word;
+        preorder=preorder+","; //for getting last numbers
+        stringstream stream(preorder);
+        while( getline(stream, word, ',') ){
+            numbers.push_back(word);
+        }
+        
+        while(i<numbers.size()){
+            if(numbers[i]!="#"){
+                strStk.push(numbers[i]);
+            }else{
+                while(!strStk.empty()){
+                    if(strStk.top()=="#"){
+                        strStk.pop();
+                        if(strStk.empty())
+                            return false;
+                        strStk.pop();
+                    }else{
+                        break;
+                    }
+                }
+                
+                strStk.push(numbers[i]);
+                
+            }
+
+            i++;
+        }
+
+        if(strStk.top()=="#" && strStk.size() == 1)
+            return true;
+
+        return false;
+    }
+};
+
 
 class Solution {
 private:
