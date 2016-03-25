@@ -13,6 +13,41 @@ Space complexity should be O(n).
 Can you do it like a boss? Do it without using any builtin function like __builtin_popcount in c++ or in any other language.
 */
 
+/*
+think this as a binary tree
+0~0
+1~1
+2~1 3~2
+4~1 5~2 6~2 7~3
+
+====>>      1
+        1       2
+      1   2   2   3
+
+for i, it could find its parent value by using i>>1
+and if i is left child, i&1==0
+else i is right child
+
+So, it could use DP function:
+
+f[i]=(i&1)+f[i >> 1];
+*/
+
+class Solution1 {
+public:
+    vector<int> countBits(int num) {
+        vector<int> res(num+1,0);
+        for(int i=1;i<=num;i++){
+            res[i]=(i&1)+res[i >> 1];
+        }
+        
+        return res;
+    }
+    
+};
+
+
+//basic way  O(n*sizeof(int))
 class Solution {
 public:
     vector<int> countBits(int num) {
