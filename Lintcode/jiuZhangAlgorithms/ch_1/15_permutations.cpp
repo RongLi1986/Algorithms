@@ -19,7 +19,8 @@ using namespace std;
 /*
 backtrack + dfs 
 O(n)
- */
+one visitMap needed to keep which item is visited
+*/
 
 class Solution {
 private:
@@ -42,7 +43,7 @@ public:
         return res;
     }
 
-    void recursiveDfs(vector<int> &nums, vector<int> subset, vector<int> visitMap){
+    void recursiveDfs(vector<int> &nums, vector<int>& subset, vector<int>& visitMap){
         // put subset into res, when it reach nums' size
         if (subset.size() == nums.size()) {
             res.push_back(subset);
@@ -64,6 +65,20 @@ public:
 };
 
 int main(){
+
+  Solution s;
+
+  //test
+  /*
+  [1,2,3]
+  
+  //corner case
+  []
+  
+  */
+
+  cout<<s.permute(nums)<<endl;
+
 
 	return 0;
 }

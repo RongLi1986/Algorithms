@@ -22,9 +22,8 @@ using namespace std;
 
 /*
 O(n^2) ways
-
- */
-
+TODO: try to use kmp algorithms
+*/
 
 class Solution {
 public:
@@ -41,7 +40,7 @@ public:
 
         // get length
         int sourceLen = strlen(source);
-        int targetLen =strlen(target);
+        int targetLen = strlen(target);
 
         //target is empty case
         if (targetLen == 0)
@@ -64,9 +63,13 @@ public:
     }
 };
 
-
-
+//Test
 int main(){
+    Solution s;
+    cout<< s.strStr(NULL, NULL) <<endl;
+    cout<< s.strStr("","") <<endl;
+    cout<< s.strStr("abc","abcd") <<endl;
+    cout<< s.strStr("abcde", "cd") <<endl;
 
 	return 0;
 }
