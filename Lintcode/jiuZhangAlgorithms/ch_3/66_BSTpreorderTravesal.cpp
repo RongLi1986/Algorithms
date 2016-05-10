@@ -41,7 +41,37 @@ public:
     }
 };
 
+//non recursive
+class Solution {
+    public:
+        vector<int> preorderTraversal(TreeNode* root) {
+            stack<TreeNode*> stk; //= new Stack<TreeNode>();
+            vector<int> preorder; // = new ArrayList<Integer>();
+            
+            if (root == NULL) {
+                return preorder;
+            }
+            
+            stk.push(root);
+            while (!stk.empty()) {
+                TreeNode* node = stk.top();
+                stk.pop();
+                
+                preorder.push_back(node->val);
+                if (node->right != NULL) {
+                    stk.push(node->right);
+                }
+                if (node->left != NULL) {
+                    stk.push(node->left);
+                }
+            }
+            
+            return preorder;
+        }
+};
 
+
+//too complex
 //non recursive
 class Solution{
 public:
