@@ -13,7 +13,7 @@ A single node tree is a BST
 using namespace std;
 
 /*
-inorder traversal + check array whether increasig or not 
+inorder traversal + check array is increasig or not 
  */
 
 class Solution {
