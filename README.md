@@ -1,3 +1,2 @@
 # Algorithms
-There are some algorithm's codes and coding interview questions.
-now I foucus on doing pratice on Leetcode and Lintcode
+prepared some algorithms, data structures questions and OOD sample code.
