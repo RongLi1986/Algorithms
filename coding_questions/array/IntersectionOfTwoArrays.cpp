@@ -7,7 +7,8 @@ Example Given nums1 = [1, 2, 2, 1], nums2 = [2, 2], return [2].
 
 /*
 solution:
-
+是利用HashMap，循环nums1[]一遍，记录下nums1[]中出现的数字，再对nums2[]做循环，
+如果在HashMap中出现过，则记录到最后的结果中。
 */
 
 #include "../include/header.hpp"
