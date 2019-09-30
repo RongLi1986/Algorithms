@@ -26,6 +26,8 @@ The buildings are look like this in the picture. The yellow part is buildings.
 struct Node {
     int x, h, isLeft;
     Node(int _x, int _h, int _isLeft):x(_x), h(_h),isLeft(_isLeft){}
+
+    //using for sort
     bool operator <(const Node &a) const {
         return x < a.x || x == a.x && isLeft < a.isLeft;
     }
