@@ -36,6 +36,19 @@ And then the window to the right one. ` [1, | 2,3,1,2,3 |] `, a maximum of ` 3 `
 o(n) time and O(k) memory
 */
 
+/*
+Method 1: for loop O(nk)
+
+Method 2: Balancing Binary Search Tree or Heap:O(nlog(k)) 
+      (a) get max
+      (b) delete element
+      (c) insert element
+
+Method 3: deque O(n)  -- monotone queue
+    (a) pop and push at front
+    (b) pop at end
+*/
+
 class Solution {
 public:
     /**
