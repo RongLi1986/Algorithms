@@ -1,86 +1,80 @@
 /*
-362. Sliding Window Maximum
+Sliding Window Matrix Maximum 558
 
-Description
-Given an array of n integer with duplicate number, and a moving window(size k), 
-move the window at each iteration from the start of the array, 
-find the maximum number inside the window at each moving.
+Question
+Given an array of n m matrix, and a moving matrix window (size k k), 
+move the window from top left to botton right at each iteration, 
+find the maximum sum of the elements inside the window at each moving. Return 0 if the answer does not exist.
 
-Example 1:
+Example
+For matrix
+[ [1, 5, 3], [3, 2, 1], [4, 1, 9], ]
+The moving window size k = 2.
+return 13.
 
-Input:
-[1,2,7,7,8]
-3
-输出:
-[7,7,8]
+At first the window is at the start of the array like this
+[ [|1, 5|, 3], [|3, 2|, 1], [4, 1, 9], ]
+,get the sum 11;
 
-Explanation：
-At first the window is at the start of the array like this `[|1, 2, 7| ,7, 8]` , return the maximum `7`;
-then the window move one step forward.`[1, |2, 7 ,7|, 8]`, return the maximum `7`;
-then the window move one step forward again.`[1, 2, |7, 7, 8|]`, return the maximum `8`;
+then the window move one step forward.
+[ [1, |5, 3|], [3, |2, 1|], [4, 1, 9], ]
+,get the sum 11;
 
+then the window move one step forward again.
+[ [1, 5, 3], [|3, 2|, 1], [|4, 1|, 9], ]
+,get the sum 10;
 
-Example 2:
+then the window move one step forward again.
+[ [1, 5, 3], [3, |2, 1|], [4, |1, 9|], ] ,get the sum 13;
+SO finally, get the maximum from all the sum which is 13.
 
-Input:
-[1,2,3,1,2,3]
-5
-Output:
-[3,3]
-
-Explanation:
-At first, the state of the window is as follows: ` [,2,3,1,2,1 | , 3] `, a maximum of ` 3 `;
-And then the window to the right one. ` [1, | 2,3,1,2,3 |] `, a maximum of ` 3 `;
-
-
-o(n) time and O(k) memory
+Challenge
+O(n^2) time.
 */
 
 /*
-Method 1: for loop O(nk)
-
-Method 2: Balancing Binary Search Tree or Heap:O(nlog(k)) 
-      (a) get max
-      (b) delete element
-      (c) insert element
-
-Method 3: deque O(n)  -- monotone queue
-    (a) pop and push at front
-    (b) pop at end
+Sliding Window Maximum + Sub Array Sum
 */
 
 class Solution {
-public:
     /**
-     * @param nums: A list of integers.
-     * @return: The maximum number inside the window at each moving.
+     * @param matrix an integer array of n * m matrix
+     * @param k an integer
+     * @return the maximum number
      */
-    
-    void inQueue(deque<int> &Q, int num) {
-        // maintain queue with incremental
-        while (!Q.empty() && Q.back() < num) {
-            Q.pop_back();
+public:
+    int maxSlidingWindow2(vector<vector<int> > matrix, int k) {
+        // Write your code here
+        if(matrix == null || matrix.size() == 0 || matrix[0].size() == 0 || k > matrix.size() || k > matrix[0].size()){
+            return -1;
         }
-        Q.push_back(num);
-    }
-    
-    vector<int> maxSlidingWindow(vector<int> &nums, int k) {
-        deque<int> Q;
-        vector<int> result;
-        
-        // build monotone queue and keep max in front
-        for (int i = 0; i < k - 1; i++) {
-            inQueue(Q, nums[i]);
+
+        int n = matrix.size();
+        int m = matrix[0].size();
+        vector<vector<int> > sum(n + 1, vector<int>(m + 1, 0));
+
+        for(int i = 0; i <= n; i++){
+            sum[i][0] = 0;
         }
-        
-        for (int i = k - 1; i < nums.size(); i++) {
-            inQueue(Q, nums[i]);
-            result.push_back(Q.front());
-            if (Q.front() == nums[i - k + 1]) {
-                Q.pop_front();
+
+        for(int j = 1; j <= m; j++){
+            sum[0][j] = 0;
+        }
+
+        for(int i = 1; i <= n; i++){
+            for(int j = 1; j <= m; j++){
+                sum[i][j] = matrix[i - 1][j - 1] + sum[i][j - 1] + sum[i - 1][j] -sum[i - 1][j - 1];
             }
         }
-        
-        return result;
+
+        int retval = INT_MIN;
+        for(int i = k; i <= n; i++){
+            for(int j = k; j <= m; j++){
+                int temp = sum[i][j] - sum[i - k][j] - sum[i][j - k] + sum[i - k][j - k];
+                retval = max(retval, temp);
+            }
+        }
+
+        return max;
     }
 };
