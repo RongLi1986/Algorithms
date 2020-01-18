@@ -9,7 +9,6 @@
 
 ## Object Oriented Design
 
-- [面向对象思想]()
 - [Design Pattern]()
 
 ## Web Service Design
