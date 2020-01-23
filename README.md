@@ -5,7 +5,7 @@
 
 ## Algorithms && Coding Interview
 
-- [Leetcode]()
+- [Leetcode](https://github.com/rong118/cs_note_101/algorithms/leetcode.md)
 
 ## Object Oriented Design
 
