@@ -5,12 +5,12 @@ This is the Leetcode questions summary listed by related topics.
 # data structure
 
 - [linked list]()
+- [array]()
 - [binary tree]()
 - [queue]()
 - [stack]()
 - [hash map]()
 - [string]()
-- [array]()
 - [graph]()
 - [bit]()
 - [union find]()
