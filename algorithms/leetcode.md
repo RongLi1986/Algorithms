@@ -1,16 +1,17 @@
 ## Leetcode 
+https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode.md
 
-This is the Leetcode questions summary listed by related topics.
+Listing Leetcode questions by related topics.
 
 # data structure
 
+- [array](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/array.md)
+- [string]()
 - [linked list]()
-- [array]()
 - [binary tree]()
 - [queue]()
 - [stack]()
-- [hash map]()
-- [string]()
+- [hashtable](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/hashtable.md)
 - [graph]()
 - [bit]()
 - [union find]()
