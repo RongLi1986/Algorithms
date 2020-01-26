@@ -25,13 +25,14 @@ Explanation: The answer is "wke", with the length of 3.
 
 ## 解题思路
 
-use Hashtable to store the characters in current window [start, end)
-Then we slide end index to the right. If it is not in the HashSet, we slide end further. 
-Doing so until s[end] is already in the HashSet. 
-At this point, we found the maximum size of substrings without duplicate characters start with index ii.
+Use Hashtable to store the characters in current window [start, end) Then we slide end index to the right.
+If it is not in the HashSet, we slide end further until s[end] is already in the HashSet. 
+then we slide left start and remove s[left] until no conflict in hashtable
 
-Time complexity : O(2n) = O(n)O(2n)=O(n)
+
+Time complexity : O(n)
 Space complexity : O(k) (k is size of hashtable)
+
 ```c++
 class Solution {
 public:
