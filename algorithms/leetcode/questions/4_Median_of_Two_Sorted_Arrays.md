@@ -30,6 +30,8 @@ The median is (2 + 3)/2 = 2.5
 反之，必然不在A的前k / 2个元素中，于是我们可以将A或B数列的前k / 2元素删去，求剩下两个数列的; k - k / 2小元素，
 于是得到了数据规模变小的同类问题，递归解决; 如果 k / 2 大于某数列个数，所求元素必然不在另一数列的前k / 2个元素中，同上操作就好
 
+Time complexity: O(log(min(m,n))).
+Space complexity: O(1)
 
 ```c++
 class Solution {
@@ -54,7 +56,7 @@ public:
             return (findMedian(array_A, m, array_B, n, (m+n)/2) + findMedian(array_A,m,array_B,n, (m+n)/2+1))/2.0;  
         }  
         else  
-            return findMedian(array_A, m, array_B,  n, (m+n)/2+1);        
+            return findMedian(array_A, m, array_B,  n, (m+n)/2+1);
     }  
 
     int findMedian(int a[], int m, int b[],  int n, int k){

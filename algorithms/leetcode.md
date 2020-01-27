@@ -18,7 +18,7 @@ Listing Leetcode questions by related topics.
 - [binary index tree]()
 
 
-# alorithms
+# algorithms
 
 - [binary search](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/binary_search.md)
 - [divide and conque](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/divide_and_conque.md)
