@@ -20,10 +20,12 @@ Input: [1,8,6,2,5,4,8,3,7]
 Output: 49
 
 
-
 ## 解题思路
 we setup two pointers from left and right side, each time we move shorter one to center, caculate and maintain the max the area
 until left and right pointer meet together.
+
+Run time complexity: O(n)
+Space complexity: O(1)
 
 ```c++
 class Solution {
