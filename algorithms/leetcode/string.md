@@ -6,3 +6,5 @@
 - [13 Roman to Integer](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/13_roman_to_integer.md)
 - [14 Longest Common Prefix](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/14_longest_common_prefix.md)
 - [28 Implement strStr()](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/28_strstr.md)
+- [38 Count and Say ](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/38_count_and_say.md)
+- [43 Multiply String ](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/43_multiply_string.md)
