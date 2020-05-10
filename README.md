@@ -1,16 +1,20 @@
 ## C++
 
-- [C++ Basic](https://github.com/rong118/cs_note_101/blob/master/c++/c++_basic.md)
-- [C++ OOP](https://github.com/rong118/cs_note_101/blob/master/c++/c++_oop.md)
-- [C++ STL](https://github.com/rong118/cs_note_101/blob/master/c++/c++_stl.md)
+- [C++ Standard Template Library](https://github.com/rong118/cs_note_101/blob/master/c++/c++_stl.md)
+- [C++ String](https://github.com/rong118/cs_note_101/blob/master/c++/c++_string.md)
+- [C++ Lambda](https://github.com/rong118/cs_note_101/blob/master/c++/c++_lambda_sort.md)
 
 ## Algorithms && Coding Interview
 
-- [Leetcode](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode.md)
+- [Leetcode Collections](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode.md)
 
 ## Object Oriented Design
 
 - [Design Pattern]()
+
+## DataBase
+
+- [SQL]()
 
 ## Web Service Design
 
