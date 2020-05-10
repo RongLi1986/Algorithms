@@ -4,3 +4,6 @@
 - [27 Remove Element](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/27_remove_element.md)
 - [48 Rotate Image](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/49_rotate_image.md)
 - [54 Spiral Matrix](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/54_spiral_matrix.md)
+- [56 Merge Intervals](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/56_merge_intervals.md)
+- [57 Insert Intervals](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/57_insert_intervals.md)
+- [59 spiral Matrix II](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/59_spiral_matrix_ii.md)
