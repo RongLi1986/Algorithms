@@ -9,3 +9,4 @@
 - [38 Count and Say ](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/38_count_and_say.md)
 - [43 Multiply String ](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/43_multiply_string.md)
 - [58 Length of Last Word ](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/58_length_of_last_word.md)
+- [67 Add Binary ](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/67_add_binary.md)

@@ -5,3 +5,5 @@
 - [34 Find First and Last Position of Element in Sorted Array](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/34_find_first_and_last_pos_in_sorted_array.md)
 - [35 Search Insert Position](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/35_find_insert_postion.md)
 - [50 Pow( x, y)](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/50_power_x_y.md)
+- [69 Sqrt](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/69_sqrt.md)
+- [74 Search a 2D Matrix](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/74_search_a_2d_matrix.md)
