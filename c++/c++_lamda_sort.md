@@ -1,4 +1,4 @@
-## Basic C++ Syntax
+## C++ Lamba Function
 
 ```c++
 // c++ sort with lambda function

@@ -9,3 +9,4 @@
 - [59 spiral Matrix II](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/59_spiral_matrix_ii.md)
 - [66 plus one](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/66_plus_one.md)
 - [73 Set Matrix Zeros](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/73_set_matrix_zeros.md)
+- [80 remove duplicates from sorted array](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/questions/73_set_matrix_zeros.md)
