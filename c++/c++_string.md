@@ -45,6 +45,20 @@ void split3(const std::string& str, Container& cont, char delim = ' ')
 }
 ```
 
+4. using getline function
+```c++
+std::vector<std::string> split(const std::string& s, char delimiter){
+    std::vector<std::string> splits;
+    std::string split;
+    std::istringstream ss(s);
+    while (std::getline(ss, split, delimiter){
+        splits.push_back(split);
+    }
+
+    return splits;
+}
+```
+
 ```c++
 #include <iostream>
 #include <string>
