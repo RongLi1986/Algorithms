@@ -10,6 +10,7 @@
 ## Algorithms && Coding Interview
 
 - [Leetcode Collections](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode.md)
+- [leetcode List 1 -200](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode_list.md)
 
 ## Architecture Design
 
