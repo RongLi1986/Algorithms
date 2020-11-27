@@ -11,7 +11,7 @@
 
 - [Leetcode Collections](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode.md)
 
-## Software Architecture Design
+## Architecture Design
 
 - [Design Pattern]()
 - [Object Oriented Design]()
@@ -24,7 +24,7 @@
 
 ## Web Service
 
-- [Web Service Design](https://github.com/rong118/cs_note_101/blob/master/web_service_design/web_service_design.md)
+- [Web Service Design](https://github.com/rong118/cs_note_101/blob/master/web_service/web_service_design.md)
 - [Designing Data-Intensive Applications Note](https://github.com/rong118/cs_note_101/blob/master/design_data_app_note/design_data_app_note.md)
 
 ## Linux
