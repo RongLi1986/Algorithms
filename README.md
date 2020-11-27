@@ -16,7 +16,6 @@
 - [Design Pattern]()
 - [Object Oriented Design]()
 
-
 ## DataBase
 
 - [DataBase Internal]()
@@ -30,5 +29,8 @@
 ## Linux
 
 - [Linux Note](https://github.com/rong118/cs_note_101/blob/master/linux/linux.md)
-- [Bash Shell]()
+- [Bash Shell](https://github.com/rong118/cs_note_101/blob/master/linux/bash.md)
 
+## Build tools
+
+- [Make]()
