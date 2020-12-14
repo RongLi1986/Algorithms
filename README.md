@@ -1,4 +1,4 @@
-# CS Learning Note => Programming, Algotithms, Data Structure, Design ......
+# CS Learning Note => Programming Language, Algorithms && Data Structure, Design, Web, System, Tools...
 
 ## C++
 
@@ -7,10 +7,24 @@
 - [C++ Lambda Function](https://github.com/rong118/cs_note_101/blob/master/c++/c++_lambda_sort.md)
 - [C++ Smart Ptr]()
 
-## Algorithms && Coding Interview
+## Javascript
+
+- []()
+
+## Perl
+
+- []()
+
+## Python
+
+- []()
+
+## Coding Interview
 
 - [Leetcode Collections](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode.md)
-- [leetcode List 1 -200](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode_list.md)
+- [leetcode List 1 -100](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode_list.md)
+
+- [Ladder](https://github.com/rong118/cs_note_101/blob/master/algorithms/ladder.md)
 
 ## Architecture Design
 
@@ -20,7 +34,6 @@
 ## DataBase
 
 - [DataBase Internal]()
-- [SQL]()
 
 ## Web Service
 
@@ -34,4 +47,9 @@
 
 ## Build tools
 
-- [Make]()
+- [Make](https://github.com/rong118/cs_note_101/blob/master/build/make.md)
+
+## Containerization
+
+- [Docker]()
+- [Kubernetes]()
