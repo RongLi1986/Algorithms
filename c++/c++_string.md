@@ -75,3 +75,23 @@ int main()
          std::ostream_iterator<std::string>(std::cout, "\n"));
 }
 ```
+
+## C++ Transfer String to lower/upper Case
+```c++
+// Functions used :
+// transform : Performs a transformation on given array/string.
+// toupper(int c) : Returns upper case version of character c. If c is already in uppercase, return c itself.
+// tolower(int c) : Returns lower case version of character c. If c is already in lowercase, return c itself.
+
+int main(){ 
+    std::string s = "ABcDeFgH"
+    transform(s.begin(), s.end(), s.begin(), ::tolower);
+    std::cout << s << std::endl;
+    transform(s.begin(), s.end(), s.begin(), ::toupper);
+    std::cout << s << std::endl;
+
+    return 0;
+}
+```
+
+

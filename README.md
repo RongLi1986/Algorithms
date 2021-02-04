@@ -7,18 +7,6 @@
 - [C++ Lambda Function](https://github.com/rong118/cs_note_101/blob/master/c++/c++_lambda_sort.md)
 - [C++ Smart Ptr]()
 
-## Javascript
-
-- []()
-
-## Perl
-
-- []()
-
-## Python
-
-- []()
-
 ## Coding Interview
 
 - [Leetcode Collections](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode.md)
@@ -53,3 +41,7 @@
 
 - [Docker]()
 - [Kubernetes]()
+
+## FrontEnd
+
+- [React](https://github.com/rong118/cs_note_101/blob/master/frontend/react.md)
