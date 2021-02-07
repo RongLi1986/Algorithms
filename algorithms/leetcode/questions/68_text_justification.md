@@ -62,6 +62,7 @@ Output:
 ]
 
 ## 解题思路
+string
 
 ```c++
 class Solution {
