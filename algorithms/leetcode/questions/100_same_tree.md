@@ -10,18 +10,18 @@ Two binary trees are considered the same if they are structurally identical, and
 
 Example 1:
 ![Image](https://assets.leetcode.com/uploads/2020/12/20/ex1.jpg)
-Input: p = [1,2,3], q = [1,2,3]
-Output: true
+> Input: p = [1,2,3], q = [1,2,3]
+> Output: true
 
 Example 2:
 ![Image](https://assets.leetcode.com/uploads/2020/12/20/ex2.jpg)
-Input: p = [1,2], q = [1,null,2]
-Output: false
+> Input: p = [1,2], q = [1,null,2]
+> Output: false
 
 Example 3:
 ![Image](https://assets.leetcode.com/uploads/2020/12/20/ex3.jpg)
-Input: p = [1,2,1], q = [1,1,2]
-Output: false
+> Input: p = [1,2,1], q = [1,1,2]
+> Output: false
 
 Constraints:
 
