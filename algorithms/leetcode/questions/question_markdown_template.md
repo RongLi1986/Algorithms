@@ -18,3 +18,5 @@ Example
 ```
 
 ## Time Complexity Analysis
+Running time  : O(n)
+running space : O(n)
