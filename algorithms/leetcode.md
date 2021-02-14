@@ -3,6 +3,7 @@ https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode.md
 
 Listing Leetcode questions by related topics.
 
+
 # data structure
 
 - [array](https://github.com/rong118/cs_note_101/blob/master/algorithms/leetcode/array.md)
