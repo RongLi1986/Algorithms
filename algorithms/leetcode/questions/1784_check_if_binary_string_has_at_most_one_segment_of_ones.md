@@ -19,9 +19,9 @@ Example 2:
  
 
 Constraints:
-1 <= s.length <= 100
-s[i]​​​​ is either '0' or '1'.
-s[0] is '1'.
+- 1 <= s.length <= 100
+- s[i]​​​​ is either '0' or '1'.
+- s[0] is '1'.
 
 ## 解题思路
 string
