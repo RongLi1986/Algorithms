@@ -13,6 +13,8 @@ List
 - item1
 - item2
 - item3
+
+n<sup>power</sup> 
 ## 分类 && 解题思路
 
 ## Code
